@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Feature from "./Feature";
 import Header from "./Header";
 import Aboutme from "./Aboutme";
+import GitRepo from "./GitRepo";
 
 const Div = styled.div``;
 
@@ -122,6 +123,7 @@ function AppLayout() {
           <Feature key={project.name} project={project} />
         ))}
       </Div>
+      <GitRepo />
     </div>
   );
 }

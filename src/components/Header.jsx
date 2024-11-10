@@ -12,7 +12,7 @@ const Headerrr = styled.header`
 function Header() {
   return (
     <Headerrr>
-      <h1>Header</h1>
+      <h1>My Portfolio</h1>
     </Headerrr>
   );
 }
