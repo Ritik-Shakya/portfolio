@@ -75,12 +75,14 @@ const Slider = styled.div`
 
 function Aboutme() {
   const [openCert, setOpenCert] = useState(false);
+  const currentUrl = document.URL;
+  console.log(currentUrl);
 
   const slides = [
-    { url: "http://localhost:5173/cnr.png", title: "Certificate1" },
-    { url: "http://localhost:5173/chcj.png", title: "Certificate2" },
-    { url: "http://localhost:5173/cj.jpg", title: "Certificate3" },
-    { url: "http://localhost:5173/CCCC.png", title: "Certificate4" },
+    { url: `${currentUrl}cnr.png`, title: "Certificate1" },
+    { url: `${currentUrl}chcj.png`, title: "Certificate2" },
+    { url: `${currentUrl}cj.jpg`, title: "Certificate3" },
+    { url: `${currentUrl}CCCC.png`, title: "Certificate4" },
   ];
 
   return (
