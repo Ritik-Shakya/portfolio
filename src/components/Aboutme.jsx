@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import ImageSlider from "./ImageSlider";
 
 const Div = styled.div`
   color: #c66868;
@@ -66,8 +67,22 @@ const Divd = styled.div`
   overflow-x: scroll;
 `;
 
+const Slider = styled.div`
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+`;
+
 function Aboutme() {
   const [openCert, setOpenCert] = useState(false);
+
+  const slides = [
+    { url: "http://localhost:5173/cnr.png", title: "Certificate1" },
+    { url: "http://localhost:5173/chcj.png", title: "Certificate2" },
+    { url: "http://localhost:5173/cj.jpg", title: "Certificate3" },
+    { url: "http://localhost:5173/CCCC.png", title: "Certificate4" },
+  ];
+
   return (
     <Div>
       <Diva>
@@ -141,13 +156,16 @@ function Aboutme() {
         )}
         {openCert ? (
           <>
-            <Divd>
+            <Slider>
+              <ImageSlider slides={slides} />
+            </Slider>
+            {/* <Divd>
               {" "}
               <ImgC src="/cnr.png" alt="certificate1" />
               <ImgC src="/chcj.png" alt="certificate2" />
               <ImgC src="/cj.jpg" alt="certificate3" />
               <ImgC src="/CCCC.png" alt="certificate4" />{" "}
-            </Divd>
+            </Divd> */}
             <Button onClick={() => setOpenCert(false)}>Close</Button>
           </>
         ) : null}
