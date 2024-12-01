@@ -114,8 +114,8 @@ const projects = [
   {
     name: "Fast-react-pizza",
     type: "Online delivery app",
-    link: "xxx",
-    img: "yyy",
+    link: "https://github.com/Ritik-Shakya",
+    img: "/rfp.png",
     technology: {
       library: "React",
       framework: "",
