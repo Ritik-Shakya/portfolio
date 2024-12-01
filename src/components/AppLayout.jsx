@@ -111,20 +111,58 @@ const projects = [
       { a: "Chats have time stamp on it" },
     ],
   },
+  {
+    name: "Fast-react-pizza",
+    type: "Online delivery app",
+    link: "xxx",
+    img: "yyy",
+    technology: {
+      library: "React",
+      framework: "",
+      router: "React-router-dom",
+      backend: "onrender API",
+      formManagement: "useState",
+      style: "Tailwind-css",
+      queryManagement: "Redux toolkit",
+      other: [
+        {
+          o: "React icons",
+        },
+        { o: "GeoCoding" },
+        { o: "date-fns" },
+      ],
+    },
+    features: [
+      { a: "User has to just enter name to start ordering" },
+      {
+        a: "The pizza menu can change, therefore the menu is called from API",
+      },
+      {
+        a: "Users can add multiple pizzas to a cart before ordering",
+      },
+      { a: "Ordering requires just user's name, phone number and address" },
+      { a: "GPS location can be provided by the user if wished" },
+      { a: "Order can be marked with priority for additional price" },
+      {
+        a: "Orders are made by sending a POST request with the order data to the API ",
+      },
+      { a: "Payments are to be made on delivery" },
+    ],
+  },
 ];
 
 function AppLayout() {
   return (
-    <div>
+    <Div>
       <Header />
-      <Div>
+      <div>
         <Aboutme />
         {projects.map((project) => (
           <Feature key={project.name} project={project} />
         ))}
-      </Div>
+      </div>
       <GitRepo />
-    </div>
+    </Div>
   );
 }
 

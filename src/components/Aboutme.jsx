@@ -76,7 +76,6 @@ const Slider = styled.div`
 function Aboutme() {
   const [openCert, setOpenCert] = useState(false);
   const currentUrl = document.URL;
-  console.log(currentUrl);
 
   const slides = [
     { url: `${currentUrl}cnr.png`, title: "Certificate1" },
